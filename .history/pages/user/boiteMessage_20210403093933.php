@@ -1,0 +1,17 @@
+<?php
+include_once('../modeles/etudiant.php');
+include_once('../modeles/message.php');
+$roles = role();
+
+$allMessage = findAll();
+
+foreach ($allMessage as $message) {
+    var_dump($message);
+?>
+    <main role="main" class="container">
+        <h3 class="mt-5"><?php echo $collection['email']; ?></h3>
+        <p class="lead"><?php echo $collection['contenu']; ?></p>
+        <p>Envoyer <a href="../sticky-footer-navbar/">the sticky footer with a fixed navbar</a> par <?php echo $tabEtudiant['']; ?></p>
+    </main>
+<?php
+}
